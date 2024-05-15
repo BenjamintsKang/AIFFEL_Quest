@@ -44,15 +44,6 @@ AIFFEL_Quest
 │   │   ├── .ipynb
 │   │   └── README.md
 │   ├── Quest04
-│   │   ├── .ipynb
-│   │   └── README.md
-│   ├── Quest05
-│   │   ├── .ipynb
-│   │   └── README.md
-│   ├── Quest06
-│   │   ├── .ipynb
-│   │   └── README.md
-│   └── Quest07
 │       ├── .ipynb
 │       └── README.md
 └── Flutter_quest
