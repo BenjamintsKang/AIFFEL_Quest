@@ -6,8 +6,8 @@
 ```bash
 AIFFEL_Quest
 ├── Readme.md
-├── 온보딩 퀘스트
-│   ├── Readme.md
+├── Onboard_quest
+│   └── Readme.md
 ├── Quest01
 │   ├── .ipynb
 │   └── README.md
