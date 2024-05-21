@@ -5,14 +5,16 @@
 
 * 아래 코드를 쓴 것이 궁금했었는데 코랩에 파일을 업로드 시 파일명 변경 있어서 넣으셨다는 같은조 이한나님의 답변을 듣고 좋은 참고가 되었습니다.
   
-         #파일명 추출
+      #파일명 추출
       filename = next(iter(f))
-* 완성된 코드를 받았는데요. 특수문자 처리에 관해 저희 조보다 더 세심한 처리를 하였습니다. 텍스트의 각 줄마다 특수문자 있는지 검토하셨네요. 꼼꼼해요.  
+* 완성된 코드를 받았는데요. 특수문자 처리에 관해 저희 조보다 더 세심한 처리를 하였습니다. 텍스트의 각 줄마다 특수문자 있는지 검토하셨네요. 꼼꼼해요.
+  
       AvengersRe = re.sub(r'[^\w\s]', ' ', AvengersLow)
       
       # 저희조: A와 z 사이에 '\' 같은 특수문자 제거 못함  
       re.sub('[^A-z]', ' ', avengers_txt)  
 * 최빈값을 처리하는 방식에서 차이를 느껴서 신선했습니다.
+  
       twoGram_Maxcounts = max(twoGram_counts,key=twoGram_counts.get)  
       max_twoGram_count = twoGram_counts[twoGram_Maxcounts]  
       
