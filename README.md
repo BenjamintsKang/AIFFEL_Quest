@@ -5,6 +5,8 @@
     - 레포 구조:
 ```bash
 AIFFEL_quest
+
+├── Onboard_quest (Artticle etc.)
 ├── Python_quest
 │   ├── Quest01
 │   │   ├── .ipynb
@@ -43,18 +45,6 @@ AIFFEL_quest
 │   └── Quest07
 │       ├── .ipynb
 │       └── README.md
-└── Flutter_quest
-    ├── Quest01
-    │   ├── TodoApp
-    │   └── README.md
-    ├── Quest02
-    │   ├── TiktokApp
-    │   └── README.md
-    ├── Quest03
-    │   ├── TranslateApp
-    │   └── README.md
-    └── Quest04
-        ├── OCRSTTAPP
-        ├── AIChatAPP
-        └── README.md
+└── Flutter_quest (TBC)
+
 ```
