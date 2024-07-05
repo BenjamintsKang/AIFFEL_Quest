@@ -1,43 +1,42 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key}); // added by Ben
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Create a Flutter app'),
+          title: Text('Create a Flutter app'), // Centered title
           centerTitle: true,
-          backgroundColor: Colors.blue,
-          leading: const Icon(Icons.home),
+          backgroundColor: Colors.blue, // Blue app bar
+          leading: Icon(Icons.home), // Icon on top left
         ),
         body: Stack(
           children: [
-            // Center the button (unchanged)
+            // Center the button
             Align(
               alignment: Alignment.center,
               child: ElevatedButton(
                 onPressed: () {
                   debugPrint('Button was pressed');
                 },
-                child: const Text('Text'),
+                child: Text('Text'),
               ),
             ),
-            // Container stack at the bottom with adjusted positions
-            Positioned(
-              bottom: 20.0, // Adjust position as needed
+            // Container stack at the bottom center
+            Align(
+              alignment: Alignment.bottomCenter,
               child: Stack(
+                alignment: Alignment.center,
                 children: [
                   for (var i = 0; i < 5; i++) // Loop for 5 containers
                     Positioned(
-                      left: 30.0 * i, // Adjust horizontal spacing
-                      top: 30.0 * i, // Adjust vertical spacing
+                      left: 80, // Adjust horizontal spacing
+                      top: 400, // Adjust vertical spacing
                       child: Container(
                         width: 300.0 - 60.0 * i,
                         height: 300.0 - 60.0 * i,
@@ -54,203 +53,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           // Add an icon to the top left of the appbar.
-//           leading: const Icon(Icons.menu),
-//           // Add the text ‘Create a Flutter app’ to the center of the appbar.
-//           title: const Text('Create a Flutter app'),
-//           // Set the appbar color to ‘blue’.
-//           backgroundColor: Colors.blue,
-//         ),
-//         body: Stack(
-//           children: [
-//             // Center the button using Align
-//             Align(
-//               alignment: Alignment.center,
-//               child: TextButton(
-//                 onPressed: () {
-//                   // Print to debug console
-//                   print('Button was pressed');
-//                 },
-//                 child: const Text('Text'),
-//               ),
-//             ),
-//             // Align stack at the bottom center
-//             Align(
-//               alignment: Alignment.bottomCenter,
-//               child: Stack(
-//                 alignment: Alignment.center,
-//                 children: [
-//                   // Five containers with increasing sizes
-//                   Container(
-//                     width: 300.0,
-//                     height: 300.0,
-//                     color: Colors.yellow,
-//                   ),
-//                   Container(
-//                     width: 240.0,
-//                     height: 240.0,
-//                     color: Colors.blue,
-//                   ),
-//                   Container(
-//                     width: 180.0,
-//                     height: 180.0,
-//                     color: Colors.pink,
-//                   ),
-//                   Container(
-//                     width: 120.0,
-//                     height: 120.0,
-//                     color: Colors.green,
-//                   ),
-//                   Container(
-//                     width: 60.0,
-//                     height: 60.0,
-//                     color: Colors.orange,
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('Test'),
-//         ),
-//         body: Stack(
-//           children: [
-//             // Center the stack using Align
-//             Align(
-//               alignment: Alignment.center,
-//               child: Stack(
-//                 // Five containers with different sizes and colors
-//                 children: [
-//                   Container(
-//                     width: 100.0,
-//                     height: 100.0,
-//                     color: Colors.yellow,
-//                   ),
-//                   Positioned(
-//                     left: 20.0,
-//                     top: 20.0,
-//                     child: Container(
-//                       width: 80.0,
-//                       height: 80.0,
-//                       color: Colors.blue,
-//                     ),
-//                   ),
-//                   Positioned(
-//                     right: 20.0,
-//                     bottom: 20.0,
-//                     child: Container(
-//                       width: 60.0,
-//                       height: 60.0,
-//                       color: Colors.pink,
-//                     ),
-//                   ),
-//                   Positioned(
-//                     left: 40.0,
-//                     bottom: 40.0,
-//                     child: Container(
-//                       width: 40.0,
-//                       height: 40.0,
-//                       color: Colors.green,
-//                     ),
-//                   ),
-//                   Positioned(
-//                     right: 40.0,
-//                     top: 40.0,
-//                     child: Container(
-//                       width: 40.0,
-//                       height: 40.0,
-//                       color: Colors.orange,
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//         home: Scaffold(
-//           appBar: AppBar(
-//             title: const Text('Test'),
-//           ),
-        
-//         column(
-//           children: [
-//            Row(child: [
-//             Image(images/icon1.jpg),
-//             Text('플러터 앱 만들기'),
-//            ], 
-//           ),
-//           ],
-
-//           body: Stack(
-//             children: [
-//               Align(
-//                   alignment: const Alignment(0.0, 0.5),
-//                   child: Container(
-//                     width: 250,
-//                     height: 250,
-//                     color: Colors.yellow,
-//                   )
-//               ),
-//               Align(
-//                 alignment: const FractionalOffset(0.6, 0.76),
-//                 child: Container(
-//                   width: 200,
-//                   height: 200,
-//                   color: Colors.blue,
-//                 ),
-//               ),
-
-//               Align(
-//                 alignment: const FractionalOffset(0.7, 0.75),
-//                 child: Container(
-//                   width: 150,
-//                   height: 150,
-//                   color: Colors.red,
-//                 ),
-//               ),
-//               // Positioned(
-//               //   left: 40.0,
-//               //   top: 40.0,
-//               //   child: Container(
-//               //     color: Colors.pink,
-//               //     height: 150.0,
-//               //     width: 150.0,
-//               //   ),
-//               //)
-//             ],
-//           ),
-//         )
-//     );
-//   }
-// }
 
 //   end of code
 
