@@ -68,17 +68,17 @@
 
 #### 3. 에러가 난 부분을 디버깅하여 “문제를 해결한 기록”을 남겼나요?  
 * 에러 수정을 위해 작성된 코드에 대한 주석 처리 등의 조치를 하였습니다.
-```
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: Scaffold(
-//         appBar: AppBar(
-//           leading: GestureDetector(
-//             onTap: () async {
-//               print('First Page에서의 is_hotel: $isHotel');
-//               isHotel = !isHotel;
+   ```
+      //   @override
+      //   Widget build(BuildContext context) {
+      //     return MaterialApp(
+      //       debugShowCheckedModeBanner: false,
+      //       home: Scaffold(
+      //         appBar: AppBar(
+      //           leading: GestureDetector(
+      //             onTap: () async {
+      //               print('First Page에서의 is_hotel: $isHotel');
+      //               isHotel = !isHotel;
 
 </br>  
 
