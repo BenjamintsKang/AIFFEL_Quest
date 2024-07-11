@@ -1,60 +1,61 @@
 > ```리뷰어: 김동규```  
 > ```코더: 강대식```
-</br>  
+</br>
+
 #### 1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?  
 
 * 홈(Agoda)에서 다른 페이지(AgodaSub, AgodaDetail)로 전환에 중점을 두고 개발을 하셨습니다.  
 * 정보 구조도에 따르면 특정 지역의 호텔 이미지를 누를 때 해당 호텔의 객실 정보를 사용자 화면에 표시하고, 화면에 나타난 객실 정보 중 더 알고자하는 객실 이미지를 누르면 그 객실에 대상 상세 정보가 나타나게 되어있습니다.  
 * 페이지 전환을 위한 페이지 설계는 잘 만들어진 이미지를 활용하셨습니다.
 * 페이지 전환을 유도하는 이미지 배치에 대해 고민한 흔적이 보입니다.
-```
-    Column(
-//               mainAxisAlignment: MainAxisAlignment.center,
-//               children: [
-//                 FaIcon(FontAwesomeIcons.hotel),
-//               ],
-//             ),
-    Stack(
-              children: [
-                Positioned.fill(
-                  child: Image.asset(
-                    'images/2.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () async {
-                          print('second Page에서의 is_hotel: $isMotel');
-                          isMotel = !isMotel;
-
-                          final result = await Navigator.push(
-                            context,
-                            // AgodaDetail을 호출하면서 isMotel 변수 데이터를 함께 전달
-                            MaterialPageRoute(
-                              builder: (context) => AgodaDetail(isHostel: isMotel),
-                            ),
-                          );
-      Stack(
-              children: [
-                Positioned.fill(
-                  child: Image.asset(
-                    'images/6.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () async {
-                          print('second Page에서의 is_hotel: $isHostel');
-                          isHostel = !isHostel;
-
+   ```
+        Column(
+    //               mainAxisAlignment: MainAxisAlignment.center,
+    //               children: [
+    //                 FaIcon(FontAwesomeIcons.hotel),
+    //               ],
+    //             ),
+        Stack(
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'images/2.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () async {
+                              print('second Page에서의 is_hotel: $isMotel');
+                              isMotel = !isMotel;
+    
+                              final result = await Navigator.push(
+                                context,
+                                // AgodaDetail을 호출하면서 isMotel 변수 데이터를 함께 전달
+                                MaterialPageRoute(
+                                  builder: (context) => AgodaDetail(isHostel: isMotel),
+                                ),
+                              );
+          Stack(
+                  children: [
+                    Positioned.fill(
+                      child: Image.asset(
+                        'images/6.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () async {
+                              print('second Page에서의 is_hotel: $isHostel');
+                              isHostel = !isHostel;
+   
 ---
 
 #### 2. 핵심적이거나 복잡하고 이해하기 어려운 부분에 작성된 설명을 보고 해당 코드가 잘 이해되었나요?  
